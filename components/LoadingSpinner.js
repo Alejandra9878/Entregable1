@@ -1,11 +1,10 @@
-// components/LoadingSpinner.js
 import React from 'react';
 import { View, ActivityIndicator, StyleSheet } from 'react-native';
 
-const LoadingSpinner = () => {
+const LoadingSpinner = ({ color = '#6200EE' }) => {
     return (
         <View style={styles.loadingSpinner}>
-            <ActivityIndicator size="large" color="#6200EE" />
+            <ActivityIndicator size="large" color={color} />
         </View>
     );
 };
@@ -19,4 +18,3 @@ const styles = StyleSheet.create({
 });
 
 export default LoadingSpinner;
-

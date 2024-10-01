@@ -1,7 +1,5 @@
-// screens/CatalogScreen.js
 import React from 'react';
 import { View, Dimensions } from 'react-native';
-import Carousel from 'react-native-snap-carousel';
 import ProductCard from '../components/ProductCard';
 import globalStyles from '../styles/globalStyles';
 
@@ -47,14 +45,6 @@ const CatalogScreen = ({ navigation }) => {
 
     return (
         <View style={globalStyles.container}>
-            <Carousel
-                data={products}
-                renderItem={renderItem}
-                sliderWidth={screenWidth}
-                itemWidth={screenWidth * 0.75} // Ajusta el ancho del item del carrusel
-                layout={'default'}
-                layoutCardOffset={18} // Espacio entre tarjetas
-            />
         </View>
     );
 };

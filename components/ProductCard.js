@@ -1,10 +1,9 @@
-// components/ProductCard.js
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
-const ProductCard = ({ product, onClick }) => {
+const ProductCard = ({ product, onClick, style }) => {
     return (
-        <TouchableOpacity style={styles.card} onPress={onClick}>
+        <TouchableOpacity style={[styles.card, style]} onPress={onClick}>
             <Image source={{ uri: product.image }} style={styles.image} />
             <Text style={styles.name}>{product.name}</Text>
             <Text style={styles.price}>${product.price}</Text>
@@ -25,24 +24,24 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.2,
         shadowRadius: 6,
-        elevation: 5, // Para Android
+        elevation: 5,
     },
     image: {
         width: '100%',
-        height: 150, // Aumentar altura
+        height: 150,
         borderRadius: 10,
-        marginBottom: 10, // Agregar margen inferior
+        marginBottom: 10,
     },
     name: {
         fontWeight: 'bold',
-        fontSize: 18, // Aumentar tamaño
+        fontSize: 18,
         marginVertical: 5,
-        textAlign: 'center', // Centrar el texto
+        textAlign: 'center',
     },
     price: {
-        fontWeight: 'bold', // Hacerlo más destacado
+        fontWeight: 'bold',
         color: 'green',
-        fontSize: 16, // Aumentar tamaño
+        fontSize: 16,
     },
 });
 

@@ -1,6 +1,5 @@
-// screens/ProductDetailScreen.js
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 import globalStyles from '../styles/globalStyles';
 
 // Simula la obtención de un producto (deberías hacer esto dinámicamente)
@@ -40,12 +39,20 @@ const ProductDetailScreen = ({ route }) => {
 
     return (
         <View style={globalStyles.container}>
-            <Image source={{ uri: product.image }} style={{ width: '100%', height: 200, borderRadius: 10 }} />
+            <Image source={{ uri: product.image }} style={styles.image} />
             <Text style={globalStyles.title}>{product.name}</Text>
             <Text>Precio: ${product.price}</Text>
             <Text>{product.description}</Text>
         </View>
     );
 };
+
+const styles = StyleSheet.create({
+    image: {
+        width: '100%',
+        height: 200,
+        borderRadius: 10,
+    },
+});
 
 export default ProductDetailScreen;

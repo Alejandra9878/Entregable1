@@ -1,4 +1,3 @@
-// components/MessageModal.js
 import React from 'react';
 import { Modal, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
@@ -13,7 +12,7 @@ const MessageModal = ({ visible, message, onClose }) => {
             <View style={styles.overlay} onTouchEnd={onClose}>
                 <View style={styles.modalContent}>
                     <Text>{message}</Text>
-                    <TouchableOpacity style={styles.closeButton} onPress={onClose}>
+                    <TouchableOpacity style={styles.closeButton} onPress={onClose} accessible={true}>
                         <Text style={styles.closeButtonText}>Cerrar</Text>
                     </TouchableOpacity>
                 </View>
@@ -48,4 +47,3 @@ const styles = StyleSheet.create({
 });
 
 export default MessageModal;
-
